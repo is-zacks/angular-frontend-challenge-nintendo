@@ -1,0 +1,22 @@
+<header>
+
+<app-navbar/>
+<app-shipping-banner/>
+</header>
+
+<body>
+<app-product-hero
+  [selectedVersion]="selectedVersion()"
+  (versionChange)="selectedVersion.set($event)">
+</app-product-hero>
+
+<app-product-description
+  [selectedVersion]='selectedVersion()'>
+
+</app-product-description>
+
+</body>
+
+<footer>
+  <app-footer/>
+</footer>

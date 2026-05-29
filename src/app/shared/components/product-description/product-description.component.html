@@ -1,0 +1,279 @@
+<section class="bg-[#ffffff] py-25 mt-5">
+
+  <div class="w-285.5 mx-auto flex justify-between items-start gap-15">
+
+    <div class="flex flex-col w-1/2">
+
+      <h2 class="text-[19px] font-semibold leading-[29.4px] text-[#484848]">
+        You're moving to the valley...
+      </h2>
+
+      <p class="mt-6 text-xs font-semibold leading-[22.4px] text-[#484848]">
+        You’ve inherited your grandfather’s old farm plot in Stardew Valley.
+        Armed with hand-me-down tools and a few coins, you set out to begin
+        your new life. Can you learn to live off the land and turn these
+        overgrown fields into a thriving home? It won’t be easy. Ever since
+        Joja Corporation came to town, the old ways of life have all but
+        disappeared. The community center, once the town’s most vibrant hub
+        of activity, now lies in shambles. But the valley seems full of
+        opportunity. With a little dedication, you might just be the one to
+        restore Stardew Valley to greatness!
+      </p>
+      <p class="mt-3 text-xs text-gray-600">
+        Software description provided by the publisher.
+      </p>
+      @if (selectedVersion() !== 'upgrade') {
+      @if (!expanded()) {
+      <p class="text-[#484848] text-2xl mt-2">...</p>
+      }@else {
+
+
+      <p class="mt-4 text-xs font-semibold leading-[22.4px] text-[#484848]">
+        Now with Multiplayer! Invite 1-3 players to join you in the valley!
+        Players can work together to build a thriving farm, share resources,
+        and build relationships with townspeople or each other. As more hands
+        are better than one, players have the option to scale profit margin
+        on produce sold for a more challenging experience.
+      </p>
+      }
+
+      <button (click)="toggleDescription()"
+        class="flex items-center gap-3 mt-6 text-red-600 font-bold cursor-pointer hover:text-red-800">
+
+        <span class="text-4xl leading-none">
+          {{ expanded() ? '−' : '+' }}
+        </span>
+
+        <span>
+          {{ expanded() ? 'Read less' : 'Read more' }}
+        </span>
+
+      </button>
+      }
+      @if(selectedVersion() === 'switch') {
+
+      <div class="mt-6">
+
+        <button
+          class="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 cursor-pointer transition-all">
+          Explore this game's official website
+        </button>
+
+      </div>
+
+      }
+
+
+
+    </div>
+
+    <div class="w-1/2 flex justify-end ">
+
+      <img [src]="descriptionImage()" alt="Description Image" class="w-145 rounded-xl">
+
+    </div>
+
+  </div>
+
+  @if(selectedVersion() !== 'upgrade') {
+
+  <div class="w-285.5 mx-auto mt-20 pr-30">
+
+    <h2 class="text-[21px] font-semibold text-[#484848] mb-8">
+      Related tags
+    </h2>
+
+    <div class="flex flex-wrap gap-4">
+
+      <button
+        class="bg-[#ececec] px-4 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Action
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Simulation
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Character customization
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Choose your own path
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Pixel art
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Romance
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Meet up & play together
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Online co-op
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Play together on multiple consoles
+      </button>
+
+      <button
+        class="bg-[#ececec] px-6 py-3 rounded-2xl text-[14px] font-medium text-[#484848] hover:text-[#e60012] cursor-pointer transition-colors">
+        Play together on one console
+      </button>
+
+    </div>
+
+  </div>
+
+  }
+</section>
+
+<!-- ABOUT THIS ITEM -->
+<section class="w-285.5 mx-auto ">
+
+  <h2 class="text-[21px] font-bold text-[#484848] mb-8">
+    About this item
+  </h2>
+
+  <div class="border-t border-gray-300">
+
+    <!-- GAME FILE SIZE -->
+    <div class="flex items-center py-8 border-b border-gray-300">
+
+      <div class="flex items-center gap-6">
+
+        <div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" xml:space="preserve" width="28" role="presentation" data-testid="StorageIcon" size="28" color="currentColor"><ellipse cx="16" cy="4.234" rx="13" ry="4.234" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></ellipse><path fill="currentColor" d="M3 15.71v5.293c0 .408.239.781.616.935C7.085 23.35 11.362 24.192 16 24.192s8.915-.84 12.384-2.254c.377-.154.616-.527.616-.935V15.71c-3.573 1.57-8.084 2.515-13 2.515S6.573 17.28 3 15.71z"></path><path fill="currentColor" d="M3 7.852v5.292c0 .408.239.782.616.935 3.469 1.414 7.746 2.254 12.384 2.254s8.915-.84 12.384-2.254c.377-.153.616-.527.616-.935V7.852c-3.573 1.57-8.084 2.514-13 2.514S6.573 9.422 3 7.852zm26 15.767c-3.573 1.57-8.084 2.514-13 2.514S6.573 25.19 3 23.62v4.147C3 30.104 8.82 32 16 32s13-1.896 13-4.234"></path></svg>        </div>
+
+        <h3 class="text-[21px] font-bold text-[#484848]">
+          Game file size
+        </h3>
+
+      </div>
+
+      <p class="text-[21px] text-[#484848] ml-73">
+        3 MB
+      </p>
+
+    </div>
+
+    <!-- SYSTEM -->
+    <div class="flex items-center py-8 border-b border-gray-300">
+
+      <div class="flex items-center gap-6">
+
+        <div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" role="presentation" data-testid="SwitchIcon" size="28" color="currentColor"><path d="M13.54 0a.18.18 0 0 1 .17.17v31.66a.15.15 0 0 1-.17.17H8.11a6.86 6.86 0 0 1-6.85-6.8V6.74A6.81 6.81 0 0 1 8.11 0h5.43zm10.4 0a6.77 6.77 0 0 1 6.8 6.74V25.2a6.82 6.82 0 0 1-6.85 6.8h-5.43a.15.15 0 0 1-.17-.17V.17c0-.11.11-.17.22-.17h5.43zM7.49 19.6a1.26 1.26 0 1 0 0 2.51 1.32 1.32 0 0 0 1.31-1.25 1.28 1.28 0 0 0-1.31-1.26zm17-3.6a2.86 2.86 0 0 0-2.85 2.86A2.86 2.86 0 1 0 24.51 16zm-14.28.86a1.26 1.26 0 1 0 0 2.51 1.35 1.35 0 0 0 1.31-1.26 1.32 1.32 0 0 0-1.29-1.25zm-5.49 0a1.26 1.26 0 1 0 0 2.51 1.36 1.36 0 0 0 1.32-1.26 1.28 1.28 0 0 0-1.3-1.25zm2.75-2.69a1.26 1.26 0 1 0 0 2.52 1.37 1.37 0 0 0 1.33-1.26 1.28 1.28 0 0 0-1.31-1.26zm17-4a1.36 1.36 0 0 0-1.31 1.26 1.32 1.32 0 1 0 1.31-1.26zm-17-5.08a2.86 2.86 0 1 0 0 5.71 2.86 2.86 0 0 0 2.85-2.86 2.82 2.82 0 0 0-2.83-2.85zm19.77 2.4a1.26 1.26 0 1 0 1.31 1.25 1.32 1.32 0 0 0-1.29-1.25zm-5.43 0a1.26 1.26 0 1 0 1.31 1.25 1.29 1.29 0 0 0-1.29-1.25zm2.68-2.75A1.36 1.36 0 0 0 23.2 6a1.32 1.32 0 1 0 1.31-1.26z" fill="currentColor" fill-rule="evenodd"></path></svg>        </div>
+
+        <h3 class="text-[21px] font-bold text-[#484848]">
+          System
+        </h3>
+
+      </div>
+
+      <a
+        class="ml-89 text-[21px] font-semibold text-[#e60012] underline hover:text-[#b00020] cursor-pointer">
+        Nintendo Switch 2
+      </a>
+
+    </div>
+
+    <!-- PUBLISHER -->
+    <div class="flex items-center py-8 border-b border-gray-300">
+
+      <div class="flex items-center gap-6">
+
+        <div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" role="presentation" data-testid="BuildingIcon" size="28" color="currentColor"><path d="M28.9 2.1C28.9 1 28 0 26.8 0H5.6C4.4 0 3.5 1 3.5 2.1v29.8H12v-6.4h7.4v6.4h9.5V2.1zm-19 25.6H6.7v-3.2h3.2v3.2zm0-5.4H6.7v-3.2h3.2v3.2zm0-5.3H6.7v-3.2h3.2V17zm0-5.3H6.7V8.5h3.2v3.2zm0-5.3H6.7V3.2h3.2v3.2zm5.2 15.9H12v-3.2h3.2v3.2zm0-5.3H12v-3.2h3.2V17zm0-5.3H12V8.5h3.2v3.2zm0-5.3H12V3.2h3.2v3.2zm5.3 15.9h-3.2v-3.2h3.2v3.2zm0-5.3h-3.2v-3.2h3.2V17zm0-5.3h-3.2V8.5h3.2v3.2zm0-5.3h-3.2V3.2h3.2v3.2zm5.3 21.3h-3.2v-3.2h3.2v3.2zm0-5.4h-3.2v-3.2h3.2v3.2zm0-5.3h-3.2v-3.2h3.2V17zm0-5.3h-3.2V8.5h3.2v3.2zm0-5.3h-3.2V3.2h3.2v3.2z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path></svg>        </div>
+
+        <h3 class="text-[21px] font-bold text-[#484848]">
+          Publisher
+        </h3>
+
+      </div>
+
+      <a
+        class="ml-84 text-[21px] font-semibold text-[#e60012] underline hover:text-[#b00020] cursor-pointer">
+        ConcernedApe
+      </a>
+
+    </div>
+
+    <!-- RELEASE DATE -->
+    <div class="flex items-center  py-8 border-b border-gray-300">
+
+      <div class="flex items-center gap-5">
+
+        <div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" xml:space="preserve" width="28" role="presentation" data-testid="CalendarIcon" size="28" color="currentColor"><path fill="currentColor" d="M21.8 19.1h5.6c.5 0 .9-.4.9-.9v-5.6c0-.5-.4-.9-.9-.9h-5.6c-.5 0-.9.4-.9.9v5.6c0 .5.4.9.9.9zm0 8.6h5.6c.5 0 .9-.4.9-.9v-5.6c0-.5-.4-.9-.9-.9h-5.6c-.5 0-.9.4-.9.9v5.6c0 .5.4.9.9.9zm1.6-20.3h1.5c.5 0 .9-.4.9-.9v-5c0-.5-.4-.9-.9-.9h-1.5c-.5 0-.9.4-.9.9v5c0 .5.4.9.9.9zm-16.3 0h1.5c.5 0 .9-.4.9-.9v-5c0-.5-.4-.9-.9-.9H7.1c-.5 0-.9.4-.9.9v5c0 .5.4.9.9.9zm6.1 20.3h5.6c.5 0 .9-.4.9-.9v-5.6c0-.5-.4-.9-.9-.9h-5.6c-.5 0-.9.4-.9.9v5.6c0 .5.4.9.9.9z"></path><path fill="currentColor" d="M29.5 4.3H27v2.2c0 1.2-.9 2.1-2.1 2.1h-1.5c-1.2 0-2.1-1-2.1-2.1V4.3H10.7v2.2c0 1.2-.9 2.1-2.1 2.1H7.1C5.9 8.6 5 7.6 5 6.5V4.3H2.5C1.1 4.3 0 5.4 0 6.7V29c0 1.4 1.1 2.5 2.5 2.5h27c1.4 0 2.5-1.1 2.5-2.5V6.7c0-1.3-1.1-2.4-2.5-2.4zm0 24.7h-27V10.4h27V29z"></path><path fill="currentColor" d="M13.2 19.1h5.6c.5 0 .9-.4.9-.9v-5.6c0-.5-.4-.9-.9-.9h-5.6c-.5 0-.9.4-.9.9v5.6c0 .5.4.9.9.9zm-8.6 8.6h5.6c.5 0 .9-.4.9-.9v-5.6c0-.5-.4-.9-.9-.9H4.6c-.5 0-.9.4-.9.9v5.6c0 .5.4.9.9.9zm0-8.6h5.6c.5 0 .9-.4.9-.9v-5.6c0-.5-.4-.9-.9-.9H4.6c-.5 0-.9.4-.9.9v5.6c0 .5.4.9.9.9z"></path></svg>        </div>
+
+        <h3 class="text-[21px] font-bold text-[#484848]">
+          Release date
+        </h3>
+
+      </div>
+
+      <p class="ml-77 text-[21px] text-[#484848]">
+        December 25, 2025
+      </p>
+
+    </div>
+
+    <!-- ESRB -->
+    <div class="flex items-center py-8 border-b border-gray-300 mb-10">
+
+      <div class="flex items-center gap-5">
+
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" role="presentation" data-testid="GearIcon" size="28" color="currentColor"><path d="M30.6 13.1h-2.4c-.3-1.4-.8-2.6-1.5-3.8l1.7-1.7c.5-.5.5-1.4 0-1.9l-2.1-2.1c-.5-.5-1.4-.5-1.9 0l-1.7 1.7c-1.2-.7-2.4-1.3-3.8-1.5V1.4c0-.7-.6-1.4-1.4-1.4h-3c-.7 0-1.4.6-1.4 1.4v2.4c-1.4.4-2.6.8-3.8 1.5L7.6 3.6c-.5-.5-1.4-.5-1.9 0L3.6 5.7c-.6.5-.6 1.4 0 1.9l1.7 1.7c-.7 1.2-1.3 2.4-1.5 3.8H1.3c-.7 0-1.4.6-1.4 1.4v3c0 .7.6 1.4 1.4 1.4h2.4c.3 1.4.8 2.6 1.5 3.8l-1.7 1.7c-.5.5-.5 1.4 0 1.9l2.1 2.1c.6.5 1.4.5 2 0l1.7-1.7c1.2.7 2.4 1.3 3.8 1.5v2.5c0 .7.6 1.4 1.4 1.4h3c.7 0 1.4-.6 1.4-1.4v-2.4c1.4-.3 2.6-.8 3.8-1.5l1.7 1.7c.5.5 1.4.5 1.9 0l2.1-2.1c.5-.5.5-1.4 0-1.9l-1.7-1.7c.7-1.2 1.3-2.4 1.5-3.8h2.4c.7 0 1.4-.6 1.4-1.4v-3c.1-.9-.6-1.5-1.4-1.5zM16 21.6c-3.1 0-5.6-2.5-5.6-5.6 0-3.1 2.5-5.6 5.6-5.6 3.1 0 5.6 2.5 5.6 5.6-.1 3.1-2.6 5.6-5.6 5.6z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path></svg>
+        </div>
+
+        <h3 class="text-[21px] font-semibold text-[#484848]">
+          ESRB rating
+        </h3>
+
+      </div>
+
+      <div class="ml-80 flex items-center gap-5">
+
+        <img
+          src="assets/ESRB_Everyone_10+.png"
+          alt="ESRB"
+          class="w-16">
+
+        <div class="flex flex-col ">
+
+          <p class="text-[10px] text-[#484848] w-60">
+            Fantasy Violence, Mild Blood, Mild Language, Simulated Gambling,
+            Use of Alcohol and Tobacco
+          </p>
+
+          <div class="border-b border-[#484848] my-1"></div>
+
+          <p class="text-[14px] text-[#484848]">
+            Users Interact
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
