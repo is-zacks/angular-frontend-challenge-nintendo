@@ -81,7 +81,10 @@ export class ProductHeroComponent {
 
     if(this.selectedVersion() === 'upgrade'){
       return 'h-280'
-    }return 'h-180'
+    }else if(this.selectedVersion()==='switch2'){
+      return 'h-165'
+    }
+    return 'h-180'
 
 
   })
