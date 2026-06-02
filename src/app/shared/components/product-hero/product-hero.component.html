@@ -4,7 +4,7 @@
 
     <div class=" flex flex-col lg:flex-row w-full lg:w-305.5 mx-auto bg-white rounded-xl shadow-md shadow-gray-300">
 
-      <div class="flex flex-col left-card w-full lg:w-180 px-8 py-5">
+      <div class="flex flex-col left-card w-full lg:w-180 px-4 lg:px-8 py-5">
 
         <div class="flex items-center gap-3 text-[13px] font-semibold mb-4">
 
@@ -49,7 +49,7 @@
           <div class="relative ">
 
             <button (click)="previousImage()" class="absolute left-6 top-1/2 -translate-y-1/2
-           w-16 h-16 rounded-full
+           lg:w-16 lg:h-16 w-10 h-10 rounded-full
            bg-black/20
            text-white
            flex items-center justify-center
@@ -61,10 +61,10 @@
 
 
             <img [class]="selectedVersion()==='switch'? 'rounded-xl' : 'rounded-b-xl'"
-              class="mt-px w-full h-92.25 object-cover" [src]="selectedImage()" alt="Stardew Valley Img">
+              class="mt-px w-full h-auto object-contain" [src]="selectedImage()" alt="Stardew Valley Img">
 
             <button (click)="nextImage()" class="absolute right-6 top-1/2 -translate-y-1/2
-           w-16 h-16 rounded-full
+           lg:w-16 lg:h-16 w-10 h-10 rounded-full
            bg-black/20
            text-white
            flex items-center justify-center
@@ -87,12 +87,12 @@
 
           <div class="flex gap-3 overflow-x-scroll">
 
-            <img class="w-24 rounded-lg cursor-pointer shrink-0" [src]="versionThumbnail()"
+            <img class="w-16 lg:w-24 rounded-lg cursor-pointer shrink-0" [src]="versionThumbnail()"
               (click)="selectedImage.set(versionThumbnail())" alt="mainImage">
 
             @for (img of images; track $index) {
 
-            <img class="w-24 rounded-lg cursor-pointer shrink-0" [src]="img" (click)="selectedImage.set(img)"
+            <img class="w-16 lg:w-24 rounded-lg cursor-pointer shrink-0" [src]="img" (click)="selectedImage.set(img)"
               alt="Thumbnail Image">
 
             }
@@ -101,7 +101,7 @@
 
 
         </div>
-        <a class="esrb-content flex  mt-11 text-[13px] gap-4" href="https://www.esrb.org/ratings-guide/">
+        <a class="esrb-content flex flex-col lg:flex-row mt-6  lg:mt-11 text-[13px] gap-4" href="https://www.esrb.org/ratings-guide/">
 
           <img class="w-12" src="assets/ESRB_Everyone_10+.png" alt="">
           <div class="flex flex-col w-75">
