@@ -80,11 +80,11 @@ export class ProductHeroComponent {
   sectionHeight = computed (()=>{
 
     if(this.selectedVersion() === 'upgrade'){
-      return 'h-280'
+      return 'lg:h-280'
     }else if(this.selectedVersion()==='switch2'){
-      return 'h-165'
+      return 'lg:h-165'
     }
-    return 'h-180'
+    return 'lg:h-180'
 
 
   })

@@ -2,9 +2,9 @@
 
   <div class="flex flex-col gap-6 items-center">
 
-    <div class=" flex w-305.5 mx-auto bg-white rounded-xl shadow-md shadow-gray-300">
+    <div class=" flex flex-col lg:flex-row w-full lg:w-305.5 mx-auto bg-white rounded-xl shadow-md shadow-gray-300">
 
-      <div class="flex flex-col left-card w-180 px-8 py-5">
+      <div class="flex flex-col left-card w-full lg:w-180 px-8 py-5">
 
         <div class="flex items-center gap-3 text-[13px] font-semibold mb-4">
 
@@ -142,7 +142,7 @@
 
 
 
-      <div class="flex flex-col gap-4 right-card flex-1 px-6 mt-5">
+      <div class="flex flex-col gap-4 right-card flex-1 w-full px-6 mt-5">
         <h1 class="text-3xl font-bold text-gray-600 pr-30 pt-6">{{title()}}</h1>
         <p class="pt-2 font-bold text-[15px]">Select a version</p>
         <div class="buttons flex flex-wrap gap-3 text-base font-bold ">
@@ -259,7 +259,7 @@
     </div>
 
     @if (selectedVersion()==='upgrade'){
-    <div class="upgrade-card w-250 flex justify-center bg-white rounded-xl py-4 flex-col px-8 gap-6 ">
+    <div class="upgrade-card w-full lg:w-250 flex justify-center bg-white rounded-xl py-4 flex-col px-8 gap-6 ">
       <p class="font-bold text-2xl flex items-center gap-3">
         <svg class="text-red-600 SystemCallout_icon__sye2r" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 34.22"
           width="24" role="presentation" data-testid="MegaphoneDarkIcon" color="currentColor" size="24">
